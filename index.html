@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyễn Quốc Anh Vũ — Frontend Developer | CV</title>
+<meta name="description" content="CV của Nguyễn Quốc Anh Vũ — Junior Web Developer chuyên HTML, CSS, JavaScript, Bootstrap, PHP MVC & ASP.NET MVC.">
+<meta name="theme-color" content="#0f1419">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f1419'/%3E%3Ctext x='50' y='62' font-size='42' font-family='monospace' fill='%2356d4dd' text-anchor='middle'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Bỏ qua tới nội dung chính</a>
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Thông tin cá nhân">
+        <div class="sidebar-inner">
+
+            <div class="identity">
+                <img src="asset/user.jpg" alt="Ảnh đại diện Nguyễn Quốc Anh Vũ" class="avatar" width="112" height="112" loading="lazy">
+                <h1 class="name">Nguyễn Quốc<br>Anh Vũ</h1>
+                <p class="role">Junior Web&nbsp;Developer</p>
+            </div>
+
+            <nav class="sidebar-section" aria-label="Thông tin liên hệ">
+                <h2 class="sidebar-label"><i class="fa-solid fa-address-card" aria-hidden="true"></i>info.json</h2>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:0878083973">0878.083.973</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:vwusadboy@gmail.com">vwusadboy@gmail.com</a>
+                        <button class="copy-btn" id="copyEmailBtn" type="button" aria-label="Sao chép địa chỉ email">
+                            <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span>Thủ Đức, TP.HCM</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <a href="https://github.com/vwudev" target="_blank" rel="noopener">github.com/vwudev</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-section">
+                <h2 class="sidebar-label"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>skills.json</h2>
+                <ul class="skill-list">
+                    <li class="skill-badge"><span class="dot" style="--dot:#e34c26"></span>HTML/CSS</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#f1c40f"></span>JavaScript</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#7952b3"></span>Bootstrap 5</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#dd0031"></span>Angular</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#8993be"></span>PHP MVC</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#6a1fc9"></span>ASP.NET MVC</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#4479a1"></span>MySQL</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#f05032"></span>Git &amp; VS Code</li>
+                    <li class="skill-badge"><span class="dot" style="--dot:#10b981"></span>Debug &amp; giải quyết vấn đề cùng AI</li>
+                </ul>
+            </div>
+
+            <button class="print-btn" id="printBtn" type="button">
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Xuất CV (PDF)
+            </button>
+        </div>
+    </aside>
+
+    <!-- EDITOR / MAIN CONTENT -->
+    <div class="editor">
+
+        <div class="tabbar" role="tablist" aria-label="Điều hướng CV">
+            <div class="traffic-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+            <button class="tab active" role="tab" aria-selected="true" data-target="hero">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>profile.js
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-target="objective">
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>objective.md
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-target="projects">
+                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>projects.json
+            </button>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Đổi giao diện sáng / tối">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <main id="main">
+
+            <!-- HERO / TERMINAL -->
+            <section id="hero" class="pane hero-pane">
+                <p class="prompt-line"><span class="prompt-sym">$</span> whoami</p>
+                <h2 class="hero-typed"><span id="typedText"></span><span class="cursor" aria-hidden="true"></span></h2>
+                <p class="hero-sub">Xây dựng giao diện web sạch, có chú tâm đến chi tiết — và không ngại đọc log lỗi lúc 1 giờ sáng.</p>
+            </section>
+
+            <!-- OBJECTIVE -->
+            <section id="objective" class="pane reveal">
+                <p class="comment">// Mục tiêu nghề nghiệp</p>
+                <p class="objective-text">
+                    Frontend Developer với nền tảng vững chắc về HTML, CSS, JavaScript và Bootstrap.
+                    Có kinh nghiệm xây dựng giao diện và phát triển hệ thống web theo mô hình kiến trúc MVC.
+                    Mong muốn được học hỏi, đóng góp giá trị cho công ty và định hướng phát triển trở thành
+                    một Full-Stack Developer chuyên nghiệp trong tương lai.
+                </p>
+            </section>
+
+            <!-- PROJECTS -->
+            <section id="projects" class="pane reveal">
+                <p class="comment">// Dự án tiêu biểu</p>
+
+                <div class="filter-bar" role="group" aria-label="Lọc dự án theo công nghệ">
+                    <button class="chip active" data-filter="all" type="button">Tất cả</button>
+                    <button class="chip" data-filter="php" type="button">PHP MVC</button>
+                    <button class="chip" data-filter="web" type="button">HTML/CSS/JS</button>
+                </div>
+
+                <div class="project-grid">
+
+                    <article class="project-card" data-tags="php">
+                        <div class="project-media">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnP-FbyaZ7K5g7J9TwKrOGvB9-jA40uK_eZQ&s" alt="Giao diện website GameShop" loading="lazy" width="400" height="220">
+                        </div>
+                        <div class="project-body">
+                            <h3>GameShop</h3>
+                            <p>Website bán game &amp; tích hợp giỏ hàng</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>PHP MVC, MySQL</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="php">
+                        <div class="project-media">
+                            <img src="asset/projects/quan-ly-nguoi-choi.jpg" alt="Hệ thống quản lý người chơi" loading="lazy" width="400" height="220">
+                        </div>
+                        <div class="project-body">
+                            <h3>Quản lý người chơi</h3>
+                            <p>Thao tác CRUD &amp; bảng xếp hạng</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>PHP MVC, MySQL</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media">
+                            <img src="asset/projects/image-converter.jpg" alt="Công cụ chuyển đổi định dạng ảnh" loading="lazy" width="400" height="220">
+                        </div>
+                        <div class="project-body">
+                            <h3>Image Converter</h3>
+                            <p>Công cụ chuyển đổi định dạng ảnh (JPG, PNG, WEBP)</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
+                            <a href="https://vwudev.github.io/converter/" target="_blank" rel="noopener" class="project-link">
+                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media">
+                            <img src="asset/projects/restaurant.jpg" alt="Giao diện JN&amp;T Restaurant" loading="lazy" width="400" height="220">
+                        </div>
+                        <div class="project-body">
+                            <h3>JN&amp;T Restaurant</h3>
+                            <p>Giao diện menu &amp; quét QR đặt bàn</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, Bootstrap</p>
+                            <a href="https://vwudev.github.io/restaurant/" target="_blank" rel="noopener" class="project-link">
+                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media">
+                            <img src="asset/projects/solar-galaxy.jpg" alt="Mô phỏng trực quan hệ mặt trời" loading="lazy" width="400" height="220">
+                        </div>
+                        <div class="project-body">
+                            <h3>Solar Galaxy</h3>
+                            <p>Mô phỏng trực quan hệ mặt trời</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
+                            <a href="https://vwudev.github.io/solar_galaxy/" target="_blank" rel="noopener" class="project-link">
+                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media book-cover">
+                            <span class="book-kicker">Ghi chép về sự tự nâng cấp</span>
+                            <span class="book-title">Bình Minh<br>Sau Một Người</span>
+                            <span class="book-quote">&ldquo;Tôi từng chờ để được chọn&rdquo;</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Bình Minh Sau Một Người</h3>
+                            <p>Trang sách tự sự cá nhân về hành trình tự nâng cấp bản thân</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
+                            <a href="https://vwudev.github.io/manifesto/" target="_blank" rel="noopener" class="project-link">
+                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+                <p class="empty-state" id="emptyState" hidden>Không có dự án nào khớp với bộ lọc này.</p>
+            </section>
+
+        </main>
+
+        <footer class="statusbar">
+            <span class="status-left"><i class="fa-solid fa-file-code" aria-hidden="true"></i><span id="statusFile">profile.js</span></span>
+            <span class="status-right">
+                <span><i class="fa-solid fa-code-branch" aria-hidden="true"></i>main</span>
+                <span>UTF-8</span>
+                <span id="statusTheme">Dark</span>
+            </span>
+        </footer>
+    </div>
+</div>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang" hidden>
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
