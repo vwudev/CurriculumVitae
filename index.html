@@ -15,6 +15,57 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Text-based project covers: no extra images required */
+.project-media.text-cover {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 220px;
+    padding: 24px;
+    overflow: hidden;
+    isolation: isolate;
+}
+.project-media.text-cover::before {
+    content: "</>";
+    position: absolute;
+    right: 18px;
+    bottom: -12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: .07;
+    z-index: -1;
+}
+.text-cover .cover-kicker {
+    font: 600 11px/1.4 "JetBrains Mono", monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .65;
+}
+.text-cover .cover-title {
+    margin-top: auto;
+    font: 800 clamp(25px, 5vw, 36px)/1.05 "Manrope", sans-serif;
+    letter-spacing: -.04em;
+}
+.text-cover .cover-stack {
+    margin-top: 12px;
+    font: 500 12px/1.5 "JetBrains Mono", monospace;
+    opacity: .7;
+}
+.text-cover .cover-mark {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font: 700 20px "JetBrains Mono", monospace;
+    opacity: .45;
+}
+</style>
+
 </head>
 <body>
 
@@ -131,81 +182,154 @@
                 <div class="project-grid">
 
                     <article class="project-card" data-tags="php">
-                        <div class="project-media">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnP-FbyaZ7K5g7J9TwKrOGvB9-jA40uK_eZQ&s" alt="Giao diện website GameShop" loading="lazy" width="400" height="220">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">PHP MVC · E-commerce</span>
+                            <span class="cover-mark">{01}</span>
+                            <span class="cover-title">GameShop</span>
+                            <span class="cover-stack">PHP · MySQL · MVC</span>
                         </div>
                         <div class="project-body">
                             <h3>GameShop</h3>
                             <p>Website bán game &amp; tích hợp giỏ hàng</p>
                             <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>PHP MVC, MySQL</p>
+                            <a href="https://github.com/vwudev?tab=repositories" target="_blank" rel="noopener" class="project-link">
+                                Xem GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </article>
 
                     <article class="project-card" data-tags="php">
-                        <div class="project-media">
-                            <img src="asset/projects/quan-ly-nguoi-choi.jpg" alt="Hệ thống quản lý người chơi" loading="lazy" width="400" height="220">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">PHP MVC · CRUD</span>
+                            <span class="cover-mark">{02}</span>
+                            <span class="cover-title">Quản lý<br>người chơi</span>
+                            <span class="cover-stack">PHP · MySQL · MVC</span>
                         </div>
                         <div class="project-body">
                             <h3>Quản lý người chơi</h3>
                             <p>Thao tác CRUD &amp; bảng xếp hạng</p>
                             <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>PHP MVC, MySQL</p>
+                            <a href="https://github.com/vwudev" target="_blank" rel="noopener" class="project-link">
+                                Xem GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </article>
 
                     <article class="project-card" data-tags="web">
-                        <div class="project-media">
-                            <img src="asset/projects/image-converter.jpg" alt="Công cụ chuyển đổi định dạng ảnh" loading="lazy" width="400" height="220">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Utility · Frontend</span>
+                            <span class="cover-mark">{03}</span>
+                            <span class="cover-title">Image<br>Converter</span>
+                            <span class="cover-stack">HTML · CSS · JavaScript</span>
                         </div>
                         <div class="project-body">
                             <h3>Image Converter</h3>
                             <p>Công cụ chuyển đổi định dạng ảnh (JPG, PNG, WEBP)</p>
                             <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
                             <a href="https://vwudev.github.io/converter/" target="_blank" rel="noopener" class="project-link">
-                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                             </a>
                         </div>
                     </article>
 
                     <article class="project-card" data-tags="web">
-                        <div class="project-media">
-                            <img src="asset/projects/restaurant.jpg" alt="Giao diện JN&amp;T Restaurant" loading="lazy" width="400" height="220">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Web Interface · QR</span>
+                            <span class="cover-mark">{04}</span>
+                            <span class="cover-title">JN&amp;T<br>Restaurant</span>
+                            <span class="cover-stack">HTML · CSS · Bootstrap</span>
                         </div>
                         <div class="project-body">
                             <h3>JN&amp;T Restaurant</h3>
                             <p>Giao diện menu &amp; quét QR đặt bàn</p>
                             <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, Bootstrap</p>
                             <a href="https://vwudev.github.io/restaurant/" target="_blank" rel="noopener" class="project-link">
-                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                             </a>
                         </div>
                     </article>
 
                     <article class="project-card" data-tags="web">
-                        <div class="project-media">
-                            <img src="asset/projects/solar-galaxy.jpg" alt="Mô phỏng trực quan hệ mặt trời" loading="lazy" width="400" height="220">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Interactive · 3D Visual</span>
+                            <span class="cover-mark">{05}</span>
+                            <span class="cover-title">Solar<br>Galaxy</span>
+                            <span class="cover-stack">HTML · CSS · JavaScript</span>
                         </div>
                         <div class="project-body">
                             <h3>Solar Galaxy</h3>
                             <p>Mô phỏng trực quan hệ mặt trời</p>
                             <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
                             <a href="https://vwudev.github.io/solar_galaxy/" target="_blank" rel="noopener" class="project-link">
-                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                             </a>
                         </div>
                     </article>
 
                     <article class="project-card" data-tags="web">
-                        <div class="project-media book-cover">
-                            <span class="book-kicker">Ghi chép về sự tự nâng cấp</span>
-                            <span class="book-title">Bình Minh<br>Sau Một Người</span>
-                            <span class="book-quote">&ldquo;Tôi từng chờ để được chọn&rdquo;</span>
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Personal · Writing</span>
+                            <span class="cover-mark">{06}</span>
+                            <span class="cover-title">Bình Minh<br>Sau Một Người</span>
+                            <span class="cover-stack">HTML · CSS · JavaScript</span>
                         </div>
                         <div class="project-body">
                             <h3>Bình Minh Sau Một Người</h3>
                             <p>Trang sách tự sự cá nhân về hành trình tự nâng cấp bản thân</p>
                             <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
                             <a href="https://vwudev.github.io/manifesto/" target="_blank" rel="noopener" class="project-link">
-                                Xem chi tiết <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Interactive Story · 2026</span>
+                            <span class="cover-mark">{07}</span>
+                            <span class="cover-title">Our Little<br>Story</span>
+                            <span class="cover-stack">HTML · CSS · JavaScript</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Our Little Story</h3>
+                            <p>Website kể chuyện tương tác với chuyển cảnh &amp; âm thanh</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
+                            <a href="https://vwudev.github.io/our-little-story/" target="_blank" rel="noopener" class="project-link">
+                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Personal · Portfolio</span>
+                            <span class="cover-mark">{08}</span>
+                            <span class="cover-title">To Her</span>
+                            <span class="cover-stack">HTML · CSS · JavaScript</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>To Her</h3>
+                            <p>Website thư tình tương tác được thiết kế như một lời tỏ tình</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
+                            <a href="https://vwudev.github.io/to-her/" target="_blank" rel="noopener" class="project-link">
+                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="web">
+                        <div class="project-media text-cover">
+                            <span class="cover-kicker">Portfolio · Resume</span>
+                            <span class="cover-mark">{09}</span>
+                            <span class="cover-title">Curriculum<br>Vitae</span>
+                            <span class="cover-stack">HTML · CSS · JavaScript</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Curriculum Vitae</h3>
+                            <p>CV online theo phong cách trình soạn thảo mã nguồn</p>
+                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
+                            <a href="https://github.com/vwudev/CurriculumVitae" target="_blank" rel="noopener" class="project-link">
+                                Xem mã nguồn <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
                         </div>
                     </article>
