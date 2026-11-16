@@ -1,409 +1,150 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="dark">
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nguyễn Quốc Anh Vũ — Frontend Developer | CV</title>
-<meta name="description" content="CV của Nguyễn Quốc Anh Vũ — Junior Web Developer chuyên HTML, CSS, JavaScript, Bootstrap, PHP MVC & ASP.NET MVC.">
-<meta name="theme-color" content="#0f1419">
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f1419'/%3E%3Ctext x='50' y='62' font-size='42' font-family='monospace' fill='%2356d4dd' text-anchor='middle'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
-
+<title>Nguyễn Quốc Anh Vũ — Junior Web Developer</title>
+<meta name="description" content="CV của Nguyễn Quốc Anh Vũ — Junior Web Developer (Frontend): HTML, CSS, JavaScript, Bootstrap, PHP MVC, ASP.NET MVC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
-<style>
-/* Text-based project covers: no extra images required */
-.project-media.text-cover {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    min-height: 220px;
-    padding: 24px;
-    overflow: hidden;
-    isolation: isolate;
-}
-.project-media.text-cover::before {
-    content: "</>";
-    position: absolute;
-    right: 18px;
-    bottom: -12px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 88px;
-    font-weight: 700;
-    line-height: 1;
-    opacity: .07;
-    z-index: -1;
-}
-.text-cover .cover-kicker {
-    font: 600 11px/1.4 "JetBrains Mono", monospace;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    opacity: .65;
-}
-.text-cover .cover-title {
-    margin-top: auto;
-    font: 800 clamp(25px, 5vw, 36px)/1.05 "Manrope", sans-serif;
-    letter-spacing: -.04em;
-}
-.text-cover .cover-stack {
-    margin-top: 12px;
-    font: 500 12px/1.5 "JetBrains Mono", monospace;
-    opacity: .7;
-}
-.text-cover .cover-mark {
-    position: absolute;
-    top: 18px;
-    right: 22px;
-    font: 700 20px "JetBrains Mono", monospace;
-    opacity: .45;
-}
-</style>
-
 </head>
 <body>
-
 <a class="skip-link" href="#main">Bỏ qua tới nội dung chính</a>
-<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
-<div class="app-shell">
+<div class="page">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar" aria-label="Thông tin cá nhân">
-        <div class="sidebar-inner">
+    <header class="top">
+        <img src="asset/user.jpg" alt="Ảnh Nguyễn Quốc Anh Vũ" class="avatar" width="96" height="128">
+        <div class="top-text">
+            <h1>Nguyễn Quốc Anh Vũ</h1>
+            <p class="role">Junior Web Developer (Frontend) · Định hướng Full-Stack</p>
+            <ul class="contact">
+                <li><span>Điện thoại</span><a href="tel:0878083973">0878.083.973</a></li>
+                <li><span>Email</span><a href="mailto:nguyenquocanhvu.work@gmail.com">nguyenquocanhvu.work@gmail.com</a></li>
+                <li><span>GitHub</span><a href="https://github.com/vwudev" target="_blank" rel="noopener">github.com/vwudev</a></li>
+                <li><span>Địa chỉ</span>Ấp Xuân Tâm 6, Xã Xuân Hòa, Thành phố Đồng Nai</li>
+            </ul>
+        </div>
+        <div class="top-actions">
+            <a class="btn" href="CV_Web_Developer_Nguyen_Quoc_Anh_Vu.pdf" download>Tải CV (PDF)</a>
+            <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="Đổi giao diện sáng / tối">Sáng / Tối</button>
+        </div>
+    </header>
 
-            <div class="identity">
-                <img src="asset/user.jpg" alt="Ảnh đại diện Nguyễn Quốc Anh Vũ" class="avatar" width="112" height="112" loading="lazy">
-                <h1 class="name">Nguyễn Quốc<br>Anh Vũ</h1>
-                <p class="role">Junior Web&nbsp;Developer</p>
+    <main id="main">
+
+        <section id="objective">
+            <h2>Mục tiêu nghề nghiệp</h2>
+            <p>Tốt nghiệp Kỹ sư Công nghệ thông tin – Ứng dụng phần mềm (03/2026), định hướng Frontend Developer. Có nền tảng HTML, CSS, JavaScript, Bootstrap và phát triển web theo mô hình MVC (PHP, ASP.NET); đã tự thực hiện và triển khai nhiều sản phẩm web lên GitHub Pages. Mong muốn làm việc trong môi trường có người hướng dẫn để nâng cao kỹ năng thực tế và phát triển thành Full-Stack Developer.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Kỹ năng</h2>
+            <dl class="rows">
+                <dt>Frontend</dt>
+                <dd>HTML5, CSS3, JavaScript, Bootstrap 5, jQuery; làm quen Angular (chuyên đề); thiết kế giao diện responsive.</dd>
+                <dt>Backend &amp; dữ liệu</dt>
+                <dd>PHP MVC + MySQL, ASP.NET MVC, Java Web; thao tác CRUD, giỏ hàng, SQL cơ bản.</dd>
+                <dt>Công cụ</dt>
+                <dd>Git, GitHub, GitHub Pages, Visual Studio Code, Photoshop (cơ bản); dùng AI hỗ trợ tra cứu, gỡ lỗi.</dd>
+                <dt>Nghiệp vụ</dt>
+                <dd>Kiểm thử phần mềm, quản lý dự án phần mềm, phân tích thiết kế hướng đối tượng (từ chương trình học).</dd>
+                <dt>Ngoại ngữ</dt>
+                <dd>Tiếng Anh: học phần 7.1 và 7.7; đang luyện đọc tài liệu kỹ thuật bằng tiếng Anh.</dd>
+            </dl>
+        </section>
+
+        <section id="projects">
+            <h2>Dự án cá nhân</h2>
+            <div class="projects">
+
+                <article class="project">
+                    <h3>GameShop</h3>
+                    <p class="tech">PHP MVC · MySQL</p>
+                    <p>Website bán game, tích hợp giỏ hàng.</p>
+                    <p class="note">Chạy cục bộ qua PHP server · có thể demo khi phỏng vấn.</p>
+                    <!-- Khi đã đẩy lên GitHub, thêm: <a href="LINK_REPO" target="_blank" rel="noopener">Mã nguồn và bản demo tải về</a> -->
+                </article>
+
+                <article class="project">
+                    <h3>Quản lý người chơi</h3>
+                    <p class="tech">PHP MVC · MySQL</p>
+                    <p>Thao tác CRUD và bảng xếp hạng.</p>
+                    <p class="note">Chạy cục bộ qua PHP server · có thể demo khi phỏng vấn.</p>
+                    <!-- Khi đã đẩy lên GitHub, thêm: <a href="LINK_REPO" target="_blank" rel="noopener">Mã nguồn và bản demo tải về</a> -->
+                </article>
+
+                <article class="project">
+                    <h3>Image Converter</h3>
+                    <p class="tech">HTML · CSS · JavaScript</p>
+                    <p>Công cụ chuyển đổi ảnh JPG, PNG, WEBP.</p>
+                    <a href="https://vwudev.github.io/converter/" target="_blank" rel="noopener">Xem dự án</a>
+                </article>
+
+                <article class="project">
+                    <h3>JN&amp;T Restaurant</h3>
+                    <p class="tech">HTML · CSS · Bootstrap</p>
+                    <p>Giao diện menu và quét QR đặt bàn.</p>
+                    <a href="https://vwudev.github.io/restaurant/" target="_blank" rel="noopener">Xem dự án</a>
+                </article>
+
+                <article class="project">
+                    <h3>Solar Galaxy</h3>
+                    <p class="tech">HTML · CSS · JavaScript</p>
+                    <p>Mô phỏng trực quan hệ mặt trời.</p>
+                    <a href="https://vwudev.github.io/solar_galaxy/" target="_blank" rel="noopener">Xem dự án</a>
+                </article>
+
+                <article class="project">
+                    <h3>CV Online</h3>
+                    <p class="tech">HTML · CSS · JavaScript</p>
+                    <p>Trang CV cá nhân này, triển khai bằng GitHub Pages.</p>
+                    <a href="https://github.com/vwudev/CurriculumVitae" target="_blank" rel="noopener">Xem mã nguồn</a>
+                </article>
+
             </div>
+        </section>
 
-            <nav class="sidebar-section" aria-label="Thông tin liên hệ">
-                <h2 class="sidebar-label"><i class="fa-solid fa-address-card" aria-hidden="true"></i>info.json</h2>
-                <ul class="contact-list">
-                    <li>
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        <a href="tel:0878083973">0878.083.973</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:vwusadboy@gmail.com">vwusadboy@gmail.com</a>
-                        <button class="copy-btn" id="copyEmailBtn" type="button" aria-label="Sao chép địa chỉ email">
-                            <i class="fa-regular fa-copy" aria-hidden="true"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        <span>Ấp Xuân Đà, Xã Xuân Hoà, Thành phố Đồng Nai</span>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        <a href="https://github.com/vwudev" target="_blank" rel="noopener">github.com/vwudev</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="sidebar-section">
-                <h2 class="sidebar-label"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>skills.json</h2>
-                <ul class="skill-list">
-                    <li class="skill-badge"><span class="dot" style="--dot:#e34c26"></span>HTML/CSS</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#f1c40f"></span>JavaScript</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#7952b3"></span>Bootstrap 5</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#dd0031"></span>Angular</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#8993be"></span>PHP MVC</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#6a1fc9"></span>ASP.NET MVC</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#4479a1"></span>MySQL</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#f05032"></span>Git &amp; VS Code</li>
-                    <li class="skill-badge"><span class="dot" style="--dot:#10b981"></span>Debug &amp; giải quyết vấn đề cùng AI</li>
-                </ul>
+        <section id="education">
+            <h2>Học vấn</h2>
+            <div class="entry">
+                <div class="entry-head"><h3>Kỹ sư Công nghệ thông tin – Ứng dụng phần mềm · Cao Đẳng Kỹ Nghệ 2 (HVCT)</h3><span>2,5 năm – 03/2026</span></div>
+                <p class="muted">Xếp loại tốt nghiệp: Khá.</p>
+                <p>Học phần nổi bật: Thực tập tốt nghiệp (9.1), Chuyên đề Web 1 – Bootstrap, jQuery (8.7), Thiết kế Website HTML/CSS/JavaScript (8.5), Quản lý dự án phần mềm (8.5), Lập trình Web PHP và MySQL (8.3), Lập trình di động (8.0), Lập trình Web với Java (8.0), Chuyên đề Web 2 – Angular (7.9), Lập trình Web ASP.NET MVC (7.6).</p>
             </div>
+        </section>
 
-            <button class="print-btn" id="printBtn" type="button">
-                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Xuất CV (PDF)
-            </button>
-        </div>
-    </aside>
+        <section id="experience">
+            <h2>Kinh nghiệm làm việc</h2>
+            <div class="entry">
+                <div class="entry-head"><h3>Nhân viên sản xuất · Nidec Instruments</h3><span>09/2026 – 10/2026</span></div>
+                <p>Làm việc theo quy trình và tiêu chuẩn chất lượng, thực hiện nhiệm vụ được phân công.</p>
+            </div>
+            <div class="entry">
+                <div class="entry-head"><h3>Nhân viên sản xuất · Dona Standard</h3><span>04/2026 – 05/2026</span></div>
+                <p>Làm việc theo ca, tuân thủ hướng dẫn và phối hợp với đồng nghiệp.</p>
+            </div>
+            <div class="entry">
+                <div class="entry-head"><h3>Thực tập sinh SEO · WIFIM JSC</h3><span>09/2025 – 11/2025</span></div>
+                <p>Làm quen nghiên cứu từ khóa, tối ưu nội dung và cấu trúc website.</p>
+            </div>
+        </section>
 
-    <!-- EDITOR / MAIN CONTENT -->
-    <div class="editor">
+        <section id="activities">
+            <h2>Hoạt động và thành tích</h2>
+            <div class="entry">
+                <div class="entry-head"><h3>Lớp trưởng</h3><span>2,5 năm</span></div>
+                <p>Điều phối hoạt động lớp, truyền đạt thông tin giữa giảng viên và sinh viên, hỗ trợ xử lý vấn đề phát sinh.</p>
+            </div>
+            <p>Điểm rèn luyện các học kỳ: 85 – 92/100 (Tốt, Xuất sắc).</p>
+        </section>
 
-        <div class="tabbar" role="tablist" aria-label="Điều hướng CV">
-            <div class="traffic-lights" aria-hidden="true"><span></span><span></span><span></span></div>
-            <button class="tab active" role="tab" aria-selected="true" data-target="hero">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>profile.js
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-target="objective">
-                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>objective.md
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-target="experience">
-                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>experience.md
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-target="projects">
-                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>projects.json
-            </button>
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Đổi giao diện sáng / tối">
-                <i class="fa-solid fa-moon" aria-hidden="true"></i>
-            </button>
-        </div>
+    </main>
 
-        <main id="main">
-
-            <!-- HERO / TERMINAL -->
-            <section id="hero" class="pane hero-pane">
-                <p class="prompt-line"><span class="prompt-sym">$</span> whoami</p>
-                <h2 class="hero-typed"><span id="typedText"></span><span class="cursor" aria-hidden="true"></span></h2>
-                <p class="hero-sub">Xây dựng giao diện web sạch, có chú tâm đến chi tiết — và không ngại đọc log lỗi lúc 1 giờ sáng.</p>
-            </section>
-
-            <!-- OBJECTIVE -->
-            <section id="objective" class="pane reveal">
-                <p class="comment">// Mục tiêu nghề nghiệp</p>
-                <p class="objective-text">
-                    Frontend Developer với nền tảng vững chắc về HTML, CSS, JavaScript và Bootstrap.
-                    Có kinh nghiệm xây dựng giao diện và phát triển hệ thống web theo mô hình kiến trúc MVC.
-                    Mong muốn được học hỏi, đóng góp giá trị cho công ty và định hướng phát triển trở thành
-                    một Full-Stack Developer chuyên nghiệp trong tương lai.
-                </p>
-            </section>
-
-            <!-- EXPERIENCE -->
-            <section id="experience" class="pane reveal">
-                <p class="comment">// Kinh nghiệm làm việc &amp; học vấn</p>
-
-                <ol class="timeline">
-                    <li class="tl-item">
-                        <span class="tl-date">2026</span>
-                        <h3>Nhân viên sản xuất</h3>
-                        <p class="tl-org"><i class="fa-solid fa-industry" aria-hidden="true"></i>Dona Standard &amp; Nidec Instruments</p>
-                        <p>Làm việc trong môi trường sản xuất theo quy trình và tiêu chuẩn chất lượng, rèn luyện tính kỷ luật, tinh thần trách nhiệm và khả năng phối hợp theo ca.</p>
-                    </li>
-                    <li class="tl-item">
-                        <span class="tl-date">Thực tập</span>
-                        <h3>Thực tập sinh SEO</h3>
-                        <p class="tl-org"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>WIFIM</p>
-                        <p>Thực tập tối ưu công cụ tìm kiếm (SEO), làm quen với nghiên cứu từ khoá, tối ưu nội dung và cấu trúc website.</p>
-                    </li>
-                    <li class="tl-item">
-                        <span class="tl-date">03/2026</span>
-                        <h3>Tốt nghiệp</h3>
-                        <p class="tl-org"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Hoàn thành chương trình đào tạo</p>
-                    </li>
-                </ol>
-            </section>
-
-            <!-- PROJECTS -->
-            <section id="projects" class="pane reveal">
-                <p class="comment">// Dự án tiêu biểu</p>
-
-                <div class="filter-bar" role="group" aria-label="Lọc dự án theo công nghệ">
-                    <button class="chip active" data-filter="all" type="button">Tất cả</button>
-                    <button class="chip" data-filter="php" type="button">PHP MVC</button>
-                    <button class="chip" data-filter="web" type="button">HTML/CSS/JS</button>
-                </div>
-
-                <div class="project-grid">
-
-                    <article class="project-card" data-tags="php">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">PHP MVC · E-commerce</span>
-                            <span class="cover-mark">{01}</span>
-                            <span class="cover-title">GameShop</span>
-                            <span class="cover-stack">PHP · MySQL · MVC</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>GameShop</h3>
-                            <p>Website bán game &amp; tích hợp giỏ hàng</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>PHP MVC, MySQL</p>
-                            <a href="https://github.com/vwudev?tab=repositories" target="_blank" rel="noopener" class="project-link">
-                                Xem GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-tags="php">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">PHP MVC · CRUD</span>
-                            <span class="cover-mark">{02}</span>
-                            <span class="cover-title">Quản lý<br>người chơi</span>
-                            <span class="cover-stack">PHP · MySQL · MVC</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>Quản lý người chơi</h3>
-                            <p>Thao tác CRUD &amp; bảng xếp hạng</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>PHP MVC, MySQL</p>
-                            <a href="https://github.com/vwudev" target="_blank" rel="noopener" class="project-link">
-                                Xem GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Utility · Frontend</span>
-                            <span class="cover-mark">{03}</span>
-                            <span class="cover-title">Image<br>Converter</span>
-                            <span class="cover-stack">HTML · CSS · JavaScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>Image Converter</h3>
-                            <p>Công cụ chuyển đổi định dạng ảnh (JPG, PNG, WEBP)</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
-                            <a href="https://vwudev.github.io/converter/" target="_blank" rel="noopener" class="project-link">
-                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Web Interface · QR</span>
-                            <span class="cover-mark">{04}</span>
-                            <span class="cover-title">JN&amp;T<br>Restaurant</span>
-                            <span class="cover-stack">HTML · CSS · Bootstrap</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>JN&amp;T Restaurant</h3>
-                            <p>Giao diện menu &amp; quét QR đặt bàn</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, Bootstrap</p>
-                            <a href="https://vwudev.github.io/restaurant/" target="_blank" rel="noopener" class="project-link">
-                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Interactive · 3D Visual</span>
-                            <span class="cover-mark">{05}</span>
-                            <span class="cover-title">Solar<br>Galaxy</span>
-                            <span class="cover-stack">HTML · CSS · JavaScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>Solar Galaxy</h3>
-                            <p>Mô phỏng trực quan hệ mặt trời</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
-                            <a href="https://vwudev.github.io/solar_galaxy/" target="_blank" rel="noopener" class="project-link">
-                                Xem dự án <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card is-private" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Personal · Writing</span>
-                            <span class="cover-mark">{06}</span>
-                            <span class="cover-title">Bình Minh<br>Sau Một Người</span>
-                            <span class="cover-stack">HTML · CSS · JavaScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>Bình Minh Sau Một Người</h3>
-                            <p>Trang sách tự sự cá nhân về hành trình tự nâng cấp bản thân</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
-                            <a href="#" class="project-link" data-lock="p6" role="button">
-                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Nhập passkey để xem
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card is-private" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Interactive Story · 2026</span>
-                            <span class="cover-mark">{07}</span>
-                            <span class="cover-title">Our Little<br>Story</span>
-                            <span class="cover-stack">HTML · CSS · JavaScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>Our Little Story</h3>
-                            <p>Website kể chuyện tương tác với chuyển cảnh &amp; âm thanh</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
-                            <a href="#" class="project-link" data-lock="p7" role="button">
-                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Nhập passkey để xem
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card is-private" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Personal · Portfolio</span>
-                            <span class="cover-mark">{08}</span>
-                            <span class="cover-title">To Her</span>
-                            <span class="cover-stack">HTML · CSS · JavaScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>To Her</h3>
-                            <p>Website thư tình tương tác được thiết kế như một lời tỏ tình</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
-                            <a href="#" class="project-link" data-lock="p8" role="button">
-                                <i class="fa-solid fa-lock" aria-hidden="true"></i> Nhập passkey để xem
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-tags="web">
-                        <div class="project-media text-cover">
-                            <span class="cover-kicker">Portfolio · Resume</span>
-                            <span class="cover-mark">{09}</span>
-                            <span class="cover-title">Curriculum<br>Vitae</span>
-                            <span class="cover-stack">HTML · CSS · JavaScript</span>
-                        </div>
-                        <div class="project-body">
-                            <h3>Curriculum Vitae</h3>
-                            <p>CV online theo phong cách trình soạn thảo mã nguồn</p>
-                            <p class="stack"><i class="fa-solid fa-code" aria-hidden="true"></i>HTML, CSS, JS</p>
-                            <a href="https://github.com/vwudev/CurriculumVitae" target="_blank" rel="noopener" class="project-link">
-Xem mã nguồn <i class="fa-brands fa-github" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-                <p class="empty-state" id="emptyState" hidden>Không có dự án nào khớp với bộ lọc này.</p>
-            </section>
-
-        </main>
-
-        <footer class="statusbar">
-            <span class="status-left"><i class="fa-solid fa-file-code" aria-hidden="true"></i><span id="statusFile">profile.js</span></span>
-            <span class="status-right">
-                <span><i class="fa-solid fa-code-branch" aria-hidden="true"></i>main</span>
-                <span>UTF-8</span>
-                <span id="statusTheme">Dark</span>
-            </span>
-        </footer>
-    </div>
-</div>
-
-<button class="back-to-top" id="backToTop" type="button" aria-label="Lên đầu trang" hidden>
-    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-</button>
-
-
-<!-- PASSKEY MODAL -->
-<div class="gate" id="gate" hidden>
-    <form class="gate-box" id="gateForm" autocomplete="off" novalidate role="dialog" aria-modal="true" aria-labelledby="gateTitle">
-        <h2 id="gateTitle"><i class="fa-solid fa-lock" aria-hidden="true"></i> Dự án riêng tư</h2>
-        <p>Nhập passkey để mở dự án này.</p>
-        <input type="password" id="gateInput" name="pk" placeholder="passkey" autocomplete="off" spellcheck="false" aria-label="Passkey" maxlength="64">
-        <p class="gate-msg" id="gateMsg" role="alert"></p>
-        <div class="gate-actions">
-            <button type="button" class="gate-cancel" id="gateCancel">Huỷ</button>
-            <button type="submit" class="gate-ok" id="gateOk">Mở khoá</button>
-        </div>
-    </form>
-</div>
-
-<div class="shield" id="shield" hidden>
-    <p><i class="fa-solid fa-ban" aria-hidden="true"></i> Trang không cho phép mở công cụ nhà phát triển.<br>Hãy đóng DevTools để tiếp tục.</p>
 </div>
 
 <script src="js/script.js"></script>
 </body>
 </html>
-
-             
